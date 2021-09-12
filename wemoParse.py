@@ -6,7 +6,7 @@ def parseDailySummary(filename):
 	rawData = []
 	isStartOfUsageSummaryTable = False
 	rowNumber = 0
-	with open(filename, 'rb') as csvfile:
+	with open(filename) as csvfile:
 		reader = csv.reader(csvfile)
 		for row in reader:
 			if not isStartOfUsageSummaryTable:
@@ -35,7 +35,7 @@ def parseEnergyData(filename):
 	rawData = []
 	isStartOfEnergyTable = False
 	rowNumber = 0
-	with open(filename, 'rb') as csvfile:
+	with open(filename) as csvfile:
 		reader = csv.reader(csvfile)
 		for row in reader:
 			if not isStartOfEnergyTable:
